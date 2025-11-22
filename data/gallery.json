@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "thumb": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+      "full": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+      "alt": "Scouts hiking through tall trees",
+      "caption": "Trail navigation practice"
+    },
+    {
+      "thumb": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80",
+      "full": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+      "alt": "Campfire gathering at dusk",
+      "caption": "Campfire cooking night"
+    },
+    {
+      "thumb": "https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b?auto=format&fit=crop&w=800&q=80",
+      "full": "https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b?auto=format&fit=crop&w=1600&q=80",
+      "alt": "Scout adjusting backpack straps",
+      "caption": "Lightweight packing demo"
+    },
+    {
+      "thumb": "https://images.unsplash.com/photo-1510279770292-4b34de9f5c23?auto=format&fit=crop&w=800&q=80",
+      "full": "https://images.unsplash.com/photo-1510279770292-4b34de9f5c23?auto=format&fit=crop&w=1600&q=80",
+      "alt": "Group overlooking a lake at sunrise",
+      "caption": "Sunrise reflection hike"
+    }
+  ]
+}

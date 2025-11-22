@@ -446,6 +446,42 @@ p {
   gap: 1rem;
 }
 
+.contact__form {
+  background: var(--cloud);
+  padding: 1.25rem;
+  border-radius: 16px;
+  border: 1px solid rgba(31, 60, 47, 0.12);
+  box-shadow: 0 12px 26px rgba(31, 60, 47, 0.12);
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact__form label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--pine);
+  font-weight: 700;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(31, 60, 47, 0.2);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact__status {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--spruce);
+}
+
+.contact__status.error {
+  color: #b00020;
+}
+
 .join-card {
   background: var(--cloud);
   border-radius: 16px;
