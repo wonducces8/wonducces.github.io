@@ -5,6 +5,8 @@ const modal = document.querySelector('.modal');
 const modalImage = document.querySelector('.modal__image');
 const modalCaption = document.querySelector('.modal__caption');
 const modalClose = document.querySelector('.modal__close');
+const activitiesGrid = document.getElementById('activities-grid');
+const activitiesData = document.getElementById('activities-data');
 
 // Mobile navigation toggle
 navToggle.addEventListener('click', () => {
@@ -56,3 +58,29 @@ modal.addEventListener('click', (event) => {
     modalImage.src = '';
   }
 });
+
+// Render activities from the JSON block for easy editing
+if (activitiesGrid && activitiesData?.textContent) {
+  try {
+    const parsed = JSON.parse(activitiesData.textContent);
+    parsed.items?.forEach((item) => {
+      const card = document.createElement('article');
+      card.className = 'card';
+
+      const title = document.createElement('h3');
+      title.textContent = item.title;
+
+      const description = document.createElement('p');
+      description.textContent = item.description;
+
+      const badge = document.createElement('span');
+      badge.className = 'badge';
+      badge.textContent = item.badge;
+
+      card.append(title, description, badge);
+      activitiesGrid.appendChild(card);
+    });
+  } catch (err) {
+    console.error('Unable to parse activities data', err);
+  }
+}
