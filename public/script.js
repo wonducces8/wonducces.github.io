@@ -1,11 +1,8 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const backToTop = document.querySelector('.back-to-top');
-const modal = document.querySelector('.modal');
-const modalImage = document.querySelector('.modal__image');
-const modalCaption = document.querySelector('.modal__caption');
-const modalClose = document.querySelector('.modal__close');
 const activitiesGrid = document.getElementById('activities-grid');
+const slidesEmbed = document.getElementById('slides-embed');
 const contactForm = document.getElementById('contact-form');
 const contactStatus = document.getElementById('contact-status');
 
@@ -34,19 +31,6 @@ window.addEventListener('scroll', () => {
 
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-// Gallery modal
-modalClose.addEventListener('click', () => {
-  modal.classList.remove('open');
-  modalImage.src = '';
-});
-
-modal.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.classList.remove('open');
-    modalImage.src = '';
-  }
 });
 
 async function renderActivities() {
@@ -78,39 +62,21 @@ async function renderActivities() {
   }
 }
 
-async function renderGallery() {
-  const galleryGrid = document.querySelector('.gallery-grid');
-  if (!galleryGrid) return;
+async function renderSlides() {
+  if (!slidesEmbed) return;
 
   try {
-    const response = await fetch('/api/gallery');
+    const response = await fetch('/api/slides');
     const data = await response.json();
-    galleryGrid.innerHTML = '';
 
-    data.items?.forEach((item) => {
-      const figure = document.createElement('figure');
-      figure.className = 'gallery-item';
-      figure.setAttribute('role', 'listitem');
-      figure.dataset.full = item.full;
-
-      const img = document.createElement('img');
-      img.src = item.thumb;
-      img.alt = item.alt;
-
-      const caption = document.createElement('figcaption');
-      caption.textContent = item.caption;
-
-      figure.append(img, caption);
-      galleryGrid.appendChild(figure);
-
-      figure.addEventListener('click', () => {
-        modalImage.src = item.full;
-        modalCaption.textContent = item.caption;
-        modal.classList.add('open');
-      });
-    });
+    if (data.embedHtml) {
+      slidesEmbed.innerHTML = data.embedHtml;
+    } else {
+      slidesEmbed.innerHTML = '<p class="slides__placeholder">Add your Google Slides embed code in data/slides.json.</p>';
+    }
   } catch (err) {
-    console.error('Unable to load gallery', err);
+    console.error('Unable to load slides', err);
+    slidesEmbed.innerHTML = '<p class="slides__placeholder error">Unable to load the slideshow right now.</p>';
   }
 }
 
@@ -143,7 +109,7 @@ async function submitContact(event) {
 }
 
 renderActivities();
-renderGallery();
+renderSlides();
 
 if (contactForm) {
   contactForm.addEventListener('submit', submitContact);
