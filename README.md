@@ -1,5 +1,5 @@
-# Forest Trail Scouts site
-A troop-branded site for Troop 1941 with an Express backend so content and form submissions aren’t just static files. The page includes a hero banner, activities overview, photo gallery with modal viewer, embedded Google Calendar, and a contact form that persists messages to disk.
+# Troop 1941 (Boy Scouts of America)
+A troop-branded site for Troop 1941 with an Express backend so content and form submissions aren’t just static files. The page includes a hero banner, activities overview, Google Slides embed for highlights, an embedded Google Calendar, and a contact form that persists messages to disk.
 
 ## Run the live site locally
 1) Install dependencies: `npm install`
@@ -22,5 +22,8 @@ Alternative hosts that work the same way: Railway, Fly.io, or any VPS where you 
 
 ## Editing content
 - Activities: update `data/activities.json` to change the “What we do” cards without touching HTML.
-- Gallery: update `data/gallery.json` to swap photo URLs, alt text, or captions.
+- Slides: drop in your Google Slides deck without editing HTML:
+  1. Open your deck in Google Slides and choose **File → Share → Publish to the web → Embed**.
+  2. Click **Publish**, copy the iframe code, and replace the `embedHtml` value in `data/slides.json` with that snippet (keep the quotes).
+  3. Save the file and reload the page; the new slides will appear in the showcase.
 - Contact storage: submissions append to `data/contact-messages.json` (kept locally; add your own email/SMS handling if needed).
