@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boy Scouts of America | Troop Website</title>
+  <meta name="description" content="A welcoming digital campfire for Troop 1941 with events, photos, and quick details for families." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="announcement">Troop 1941 • Ashburn, VA — Meeting at Farmwell Station Middle School</div>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">1941</div>
+      <div>
+        <span class="brand-name">Boy Scouts of America</span>
+        <small class="brand-tagline">Troop 1941 • Ashburn, VA</small>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#gallery">Photos</a></li>
+        <li><a href="#calendar">Calendar</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn ghost" href="#contact">Plan a visit</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <p class="eyebrow">Troop 1941 • Ashburn, VA</p>
+        <h1>Adventure, skills, and service wrapped into one troop .</h1>
+        <p class="lede">We build confident leaders through camping, hiking, community projects, and a love for the outdoors. Bring your boots — we’ll handle the rest.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#calendar">See upcoming events</a>
+          <a class="btn ghost" href="#gallery">View recent trips</a>
+        </div>
+        <div class="hero__meta">
+          <div><strong>160+</strong><span>Trail miles hiked last year</span></div>
+          <div><strong>45</strong><span>Active scouts & leaders</span></div>
+          <div><strong>26</strong><span>Service projects completed</span></div>
+        </div>
+      </div>
+    </section>
+<!--
+    <section id="about" class="section two-column">
+      <div>
+        <p class="eyebrow">Who we are</p>
+        <h2>Rooted in the forest, inspired by community.</h2>
+        <p>Boy Scouts of America Troop 1941 is a welcoming troop that blends classic Scouting traditions with modern skills — from knot-tying and first aid to digital navigation. Parents, leaders, and scouts work together to keep adventures safe, meaningful, and fun.</p>
+        <ul class="pill-list">
+          <li>Monthly campouts</li>
+          <li>Quarterly service days</li>
+          <li>Merit badge workshops</li>
+          <li>STEM & outdoor skills nights</li>
+        </ul>
+      </div>
+      -->
+     <!-- <div class="highlight-card">
+        <h3>Parents at a glance</h3>
+        <p>Stay in the loop with quick links and ready-to-go packing lists.</p>
+        <ul>
+          <li>✅ Downloadable gear checklist</li>
+          <li>✅ Emergency contacts & medical forms</li>
+          <li>✅ Carpool signups for outings</li>
+        </ul>
+        <a class="btn" href="#contact">Get details</a>
+      </div>
+    </section> 
+      -->
+
+    <section id="activities" class="section cards">
+      <div class="section__header">
+        <p class="eyebrow">What we do</p>
+        <h2>Hands-on adventures with a forest-first vibe.</h2>
+        <p class="lede">Content now streams from the server, so you can edit `data/activities.json` without touching HTML.</p>
+      </div>
+      <div class="card-grid" id="activities-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <div class="section__header">
+        <p class="eyebrow">Photo log</p>
+        <h2>Recent trips & campfire moments.</h2>
+      </div>
+      <div class="gallery-grid" role="list">
+        <figure class="gallery-item" role="listitem" data-full="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Scouts hiking through tall trees" />
+          <figcaption>Trail navigation practice</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-full="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80" alt="Campfire gathering at dusk" />
+          <figcaption>Campfire cooking night</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-full="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1508766206392-8bd5cf550d1b?auto=format&fit=crop&w=800&q=80" alt="Scout adjusting backpack straps" />
+          <figcaption>Lightweight packing demo</figcaption>
+        </figure>
+        <figure class="gallery-item" role="listitem" data-full="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1510279770292-4b34de9f5c23?auto=format&fit=crop&w=800&q=80" alt="Group overlooking a lake at sunrise" />
+          <figcaption>Sunrise reflection hike</figcaption>
+        </figure>
+      </div>
+      <div class="gallery-help">Tap a photo to view it larger.</div>
+      <div class="modal" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button class="modal__close" aria-label="Close viewer">×</button>
+        <img class="modal__image" src="" alt="Expanded scout photo" />
+        <p class="modal__caption"></p>
+      </div>
+    </section>
+
+    <section id="calendar" class="section calendar">
+      <div class="section__header">
+        <p class="eyebrow">Stay in sync</p>
+        <h2>Upcoming events & campouts.</h2>
+        <p>Add the troop calendar to your phone so you never miss an event</p>
+      </div>
+      <div class="calendar__embed">
+        <iframe title="Troop calendar" src="<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&title=Troop%201941&src=ZmlhMDRpcW9xdm40bW1nMmQ3anNpcjVuOWQzOTVnMjhAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23c0ca33" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>"></iframe>">
+      </div>
+      <div class="calendar__cta">
+        <a class="btn" href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noopener">Add to my Google Calendar</a>
+        <a class="btn ghost" href="#about">About Troop 1941</a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div>
+        <p class="eyebrow">Reach out</p>
+        <h2>Questions? We’re here to help.</h2>
+        <p>Email the Scoutmaster.</p>
+        <div class="contact__grid">
+          <div>
+            <h3>Scoutmaster</h3>
+            <p><a href="mailto:scoutmaster@troop1941.org">scoutmaster@troop1941.org</a></p>
+            <p>Text alerts: <a href="sms:+15715551234">+1 (571) 555-1234</a></p>
+          </div>
+          <div>
+            <h3>Meeting location</h3>
+            <p>Farmwell Station Middle School<br />Ashburn, VA</p>
+          </div>
+          <div>
+            <h3>Visitors welcome</h3>
+            <p>Come visit a meeting!</p>
+          </div>
+          <form class="contact__form" id="contact-form">
+            <h3>Send a note</h3>
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn" type="submit">Send</button>
+            <p class="contact__status" id="contact-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <div class="brand-mark">1941</div>
+      <p>Boy Scouts of America • Troop 1941</p>
+      <p class="footnote">Where I Choose</p>
+    </div>
+    <div class="footer__links">
+      <a href="#about">About</a>
+      <a href="#calendar">Calendar</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer__meta">
+      <p>Follow our journey:</p>
+      <div class="social">
+         <a href="#" aria-label="Email">✉️</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

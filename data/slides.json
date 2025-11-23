@@ -1,0 +1,4 @@
+{
+  "note": "Replace embedHtml with the Google Slides embed code for your troop deck.",
+  "embedHtml": "<iframe src=\"https://docs.google.com/presentation/d/e/2PACX-1vQkVnVKRlnbHvkrdOX0KPPBvI5TEiJ_CirbS0YoH1ex5brf6416zRW59Lsuw95V8A/embed?start=false&loop=false&delayms=3000\" frameborder=\"0\" width=\"960\" height=\"569\" allowfullscreen=\"true\" mozallowfullscreen=\"true\" webkitallowfullscreen=\"true\"></iframe>"
+}

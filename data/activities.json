@@ -1,0 +1,23 @@
+{
+  "title": "Troop 1941 Activities",
+  "note": "Edit this file to change the What We Do cards.",
+  "items": [
+    {
+    },
+    {
+      "title": "Campouts",
+      "description": "Monthly campouts featuring campfire cooking, fun hikes, and other fun activities",
+      "badge": "Monthly"
+    },
+    {
+      "title": "Service Projects",
+      "description": "Trail cleanups, food drives, and community events.",
+      "badge": "Upon Request"
+    },
+    {
+      "title": "Merit Badges",
+      "description": "Hands-on badge workshops in first aid, knots, and STEM crafts.",
+      "badge": "Upon Request"
+    }
+  ]
+}
