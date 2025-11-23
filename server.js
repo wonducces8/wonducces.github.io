@@ -25,8 +25,8 @@ app.get('/api/activities', (_req, res) => {
   res.json(readJson('activities.json'));
 });
 
-app.get('/api/gallery', (_req, res) => {
-  res.json(readJson('gallery.json'));
+app.get('/api/slides', (_req, res) => {
+  res.json(readJson('slides.json'));
 });
 
 app.post('/api/contact', (req, res) => {
