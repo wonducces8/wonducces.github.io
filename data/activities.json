@@ -3,24 +3,21 @@
   "note": "Edit this file to change the What We Do cards.",
   "items": [
     {
-      "title": "Trail Treks",
-      "description": "Weekend hikes through nearby parks with map-reading practice and Leave No Trace tips.",
-      "badge": "Every 3rd Saturday"
     },
     {
       "title": "Campouts",
-      "description": "Seasonal campouts featuring campfire cooking, shelter building, and night sky navigation.",
-      "badge": "Quarterly"
-    },
-    {
-      "title": "Service Projects",
-      "description": "Trail cleanups, food drives, and community events that sharpen leadership and teamwork.",
+      "description": "Monthly campouts featuring campfire cooking, fun hikes, and other fun activities",
       "badge": "Monthly"
     },
     {
-      "title": "Skills Lab",
-      "description": "Hands-on badge workshops in first aid, knots, STEM crafts, and safe tool use.",
-      "badge": "Twice a month"
+      "title": "Service Projects",
+      "description": "Trail cleanups, food drives, and community events.",
+      "badge": "Upon Request"
+    },
+    {
+      "title": "Merit Badges",
+      "description": "Hands-on badge workshops in first aid, knots, and STEM crafts.",
+      "badge": "Upon Request"
     }
   ]
 }
