@@ -1,7 +1,7 @@
 {
   "name": "troop-1941-site",
   "version": "1.0.0",
-  "description": "Forest Trail Scouts Troop 1941 site with Express backend",
+  "description": "Boy Scouts of America Troop 1941 site with Express backend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
